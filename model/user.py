@@ -1,7 +1,7 @@
 """Module for managing user data."""
 
 
-class USser:
+class User:
     """Represents a system user."""
 
     def __init__(self, name, email):
