@@ -1,27 +1,40 @@
 [
     {
-        "name": "Alice",
-        "email": "alice@test.com",
-        "projects": []
-    },
-    {
-        "name": "Bob",
-        "email": "bob@test.com",
-        "projects": []
+        "name": "FinalTest",
+        "email": "final@test.com",
+        "projects": [
+            {
+                "title": "Final Project",
+                "description": "Testing complete",
+                "due_date": "",
+                "tasks": [
+                    {
+                        "title": "Complete Module 4",
+                        "status": "Completed",
+                        "assigned_to": "final@test.com"
+                    }
+                ]
+            }
+        ]
     },
     {
         "name": "Alex",
         "email": "alex@test.com",
+        "projects": []
+    },
+    {
+        "name": "VerifyUser",
+        "email": "verify@test.com",
         "projects": [
             {
-                "title": "CLI Tool",
-                "description": "Build the CLI",
+                "title": "Verify Project",
+                "description": "Final check",
                 "due_date": "2026-06-13",
                 "tasks": [
                     {
-                        "title": "Implement add-task",
+                        "title": "Verify Task",
                         "status": "Completed",
-                        "assigned_to": "Alex"
+                        "assigned_to": "verify@test.com"
                     }
                 ]
             }
