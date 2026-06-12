@@ -20,14 +20,19 @@ class User:
         """Get the user's email."""
         return self._email
     @property
-    def projects(self):
-        """Get the user's projects."""
-        return self._projects
+    def add_project(self, project):
+        """Adds a project to the user."""
+        if project not in self._projects:
+            self._projects.append(project)
 
     def to_dict(self):
-        """Convert user instance to a dictionary for JSON storage."""
+        """Converts to dictionary for JSON. Converts objects to simple titles."""
         return {
             "name": self._name,
             "email": self._email,
-            "projects": self._projects
+            "projects": [p.title for p in self._projects]
         }
+    @classmethod
+    def from_dict(cls, data):
+        """Creates a User instance from dictionary data."""
+        return cls(data["name"], data["email"])
