@@ -2,7 +2,6 @@
 
 import argparse
 from utils.storage import load_data, save_data
-from model.user import User
 
 
 def main():
