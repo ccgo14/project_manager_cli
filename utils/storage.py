@@ -3,7 +3,12 @@ import os
 
 def save_data(data, filename="data/cli.json"):
     with open(filename, "w", encoding="utf-8") as f:
-        json.dump([item.to_dict() for item in data], f, indent=4) # Ensure your models have .to_dict()
+        
+        if data and hasattr(data[0], 'to_dict'):
+            json.dump([item.to_dict() for item in data], f, indent=4)
+        else:
+
+            json.dump(data, f, indent=4)
 
 def load_data(filename="data/cli.json"):
     if not os.path.exists(filename):
