@@ -1,20 +1,16 @@
-import argparse
 import sys
 import os
 
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+import argparse
 from rich.console import Console
 from rich.table import Table
 from utils.storage import load_data, save_data
 from model.user import User
 
-# Add path to allow local imports
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-
-
-
 console = Console()
-
 
 def list_users():
     users = load_data()
