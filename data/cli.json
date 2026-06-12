@@ -12,6 +12,19 @@
     {
         "name": "Alex",
         "email": "alex@test.com",
-        "projects": []
+        "projects": [
+            {
+                "title": "CLI Tool",
+                "description": "Build the CLI",
+                "due_date": "2026-06-13",
+                "tasks": [
+                    {
+                        "title": "Implement add-task",
+                        "status": "Completed",
+                        "assigned_to": "Alex"
+                    }
+                ]
+            }
+        ]
     }
 ]
